@@ -1,0 +1,21 @@
+parameters:
+    birkneralex.xenforo_auth.security.user.user_provider.class: BirknerAlex\XenForoAuthBundle\Security\User\XenForoUserProvider
+    birkneralex.xenforo_auth.security.authentication.provider.class: BirknerAlex\XenForoAuthBundle\Security\Authentication\Provider\XenForoProvider
+    birkneralex.xenforo.sdk.class: BirknerAlex\Xenforo\XenForoSDK
+
+services:
+    birkneralex.xenforo.sdk:
+        class: %birkneralex.xenforo.sdk.class%
+        arguments: ["%xenforo_path%"]
+
+    birkneralex.xenforo_auth.user_provider:
+        class: %birkneralex.xenforo_auth.security.user.user_provider.class%
+        arguments:
+            - @birkneralex.xenforo.sdk
+            - @session
+
+    birkneralex.xenforo_auth.authentication.provider:
+        class: %birkneralex.xenforo_auth.security.authentication.provider.class%
+        arguments:
+            - ''
+            - @birkneralex.xenforo.sdk

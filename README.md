@@ -1,0 +1,1 @@
+# XenForo Auth Bundle

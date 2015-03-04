@@ -1,0 +1,31 @@
+{
+  "name": "tyrola/xenforo-auth-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony2 XenForo Auth Bundle",
+  "keywords": ["xenforo", "auth", "symfony2"],
+  "homepage": "https://tyrola.at",
+  "authors": [
+    {
+      "name": "Alexander Birkner",
+      "email": "alex.birkner@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "symfony/framework-bundle": "~2.1",
+    "symfony/security-bundle": "~2.1",
+    "tyrola/xenforo-sdk": "1.0.*@dev"
+  },
+  "require-dev": {
+    "symfony/class-loader": "~2.1"
+  },
+  "autoload": {
+    "psr-0": { "BirknerAlex\\XenForoAuthBundle": "" }
+  },
+  "target-dir": "BirknerAlex/XenForoAuthBundle",
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
